@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock,Pepper, and Seccisor Game</title>
+</head>
+<style>
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    background-color: #4285f4;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2.5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #4285f4;
+    margin: 0;
+}
+
+.scoreboard p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.msg-container {
+    margin-top: 2rem;
+}
+
+#msg {
+    display: inline-block;
+    background-color: #121212;
+    color: white;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+<body>
+    <h1>Rock Pepper and Game</h1>
+   <div class="choice" id="rock">
+    <img src="Character/rock (1).png" alt="Rock">
+</div>
+<div class="choice" id="paper">
+    <img src="Character/paper.png" alt="Paper">
+</div>
+<div class="choice" id="scissors">
+    <img src="Character/scissors (1).png" alt="Scissors">
+</div>
+
+    <div class="scoreboard">
+        <div id="score">
+            <p id="user-score">0</p>
+            <p>User</p>
+        </div>
+        <div id="score">
+            <p id="comp-score">0</p>
+            <p>Comp</p>
+        </div>
+    </div>
+    <div class="msg-container">
+        <p id="msg">Play your move</p>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
